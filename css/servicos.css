@@ -1,0 +1,19 @@
+.secao-servicos{
+    display: flex;
+    padding: 20px;
+    margin: 0px;
+}
+
+.servicos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+p{
+    display: flex;
+    padding: 10px;
+}
+.corte {
+    padding: 50px;
+}
