@@ -1,0 +1,46 @@
+.secao-servicos{
+    display: flex;
+    padding: 20px;
+    margin: 0px;
+   
+
+}
+
+.servicos{
+    display:flex;
+    margin: 0px;
+
+
+
+}
+p{
+    display: flex;
+    text-align: center;
+    padding: 0; 
+    font-size: 16px; 
+}
+img{
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+}
+.corte{
+    border: 2px solid #000; 
+    padding: 10px; 
+    margin: 10px; 
+}
+.barba{
+    border: 2px solid #000; 
+    padding: 10px; 
+    margin: 10px; 
+}
+.hidratacao{
+    border: 2px solid #000; 
+    padding: 10px; 
+    margin: 10px; 
+}
+.massagem{
+    border: 2px solid #000; 
+    padding: 10px; 
+    margin: 10px; 
+}
