@@ -1,46 +1,80 @@
-.secao-servicos{
+.secao-servicos {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    margin: 0px;
-   
-
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
 }
 
-.servicos{
-    display:flex;
-    margin: 0px;
-
-
-
-}
-p{
+.servicos {
     display: flex;
+    overflow-x: auto; /* Ativa a rolagem horizontal */
+    scroll-behavior: smooth;
+    white-space: nowrap; /* Mantém os elementos em uma única linha */
+    gap: 20px;
+    padding: 10px;
+    scrollbar-width: none; /* Esconde a barra no Firefox */
+    -ms-overflow-style: none; /* Esconde a barra no IE/Edge */
+}
+
+.servicos::-webkit-scrollbar {
+    display: none; /* Esconde a barra no Chrome e Safari */
+}
+
+.servicos > div {
+    display: inline-block;
+    flex: 0 0 auto; /* Mantém os elementos com largura fixa */
+    width: 320px; /* Define uma largura consistente */
     text-align: center;
-    padding: 0; 
-    font-size: 16px; 
+    padding: 15px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
 }
-img{
-    padding: 20px;
-    width: 300px;
-    height: 200px;
+
+.servicos > div:hover {
+    transform: translateY(-10px); /* Eleva o card ao passar o mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
 }
-.corte{
-    border: 2px solid #000; 
-    padding: 10px; 
-    margin: 10px; 
+
+.servicos img {
+    width: 100%;
+    max-width: 280px; /* Para melhor ajuste */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
 }
-.barba{
-    border: 2px solid #000; 
-    padding: 10px; 
-    margin: 10px; 
+
+.servicos h1 {
+    font-size: 1.5em;
+    color: #003366;
+    margin-bottom: 10px;
+    font-weight: bold; /* Mais destaque para o título */
 }
-.hidratacao{
-    border: 2px solid #000; 
-    padding: 10px; 
-    margin: 10px; 
+
+.servicos p {
+    font-size: 14px;
+    line-height: 1.5;
+    max-height: 80px; /* Para evitar textos longos demais */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Exibe no máximo 4 linhas */
+    -webkit-box-orient: vertical;
+    color: #666; /* Cor mais suave para o texto */
 }
-.massagem{
-    border: 2px solid #000; 
-    padding: 10px; 
-    margin: 10px; 
+
+@media (max-width: 768px) {
+    .servicos {
+        flex-wrap: wrap; /* Permite que os cards quebrem para a linha em telas menores */
+        justify-content: center;
+    }
+
+    .servicos > div {
+        width: 90%; /* Ajusta a largura para telas menores */
+    }
 }

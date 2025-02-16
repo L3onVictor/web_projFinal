@@ -1,8 +1,4 @@
-/* .produtos {
-    text-align: center;
-    padding: 20px;
-} */
-
+/* Reset global */
 * {
     max-width: 100vw;
     box-sizing: border-box;
@@ -11,31 +7,36 @@
 html, body {
     overflow-x: hidden;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-
+/* Container de produtos */
 .produtos {
     display: flex;
+    flex-wrap: nowrap;
     overflow-x: auto;
     scroll-behavior: smooth;
-    white-space: nowrap;
-    overflow-x: scroll;  /* Mantém o scroll funcional */
+    gap: 20px;
+    padding: 10px;
     scrollbar-width: none; /* Esconde a barra no Firefox */
     -ms-overflow-style: none; /* Esconde a barra no IE e Edge */
 }
 
+.produtos::-webkit-scrollbar {
+    display: none; /* Esconde a barra no Chrome e Safari */
+}
+
+/* Produto individual */
 .produto {
-    display: inline-block;
-    overflow-x: hidden;
-    width: 250px;
-    margin: 20px;
+    flex: 0 0 250px; /* Largura fixa */
+    text-align: center;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    text-align: center;
-    background-color: #f9f9f9;
+    background-color: #fff;
+    overflow: hidden; /* Evita que o texto extrapole */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
 }
 
 .produto:hover {
@@ -43,8 +44,12 @@ html, body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Imagem do produto */
 .produto img {
     width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
@@ -53,66 +58,23 @@ html, body {
     transform: scale(1.1);
 }
 
+/* Título do produto */
 .produto h3 {
     color: #003366;
     font-size: 1.2em;
     margin: 10px 0;
 }
 
-.produto p {
-    font-size: 0.9em;
-    color: #555;
+/* Preço do produto */
+.produto span {
+    font-weight: bold;
+    color: #ff6600;
+    display: block;
+    font-size: 1.1em;
+    margin: 10px 0;
 }
 
-
-.produto button {
-    background-color: #003366;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.produto button:hover {
-    background-color: #ff6600;
-}
-
-.produtos {
-    display: flex;
-    flex-wrap: nowrap; /* Evita que os itens quebrem a linha */
-    overflow-x: auto;
-    gap: 20px;
-    padding: 10px;
-}
-
-.produto {
-    flex: 0 0 250px; /* Largura fixa */
-    text-align: center;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fff;
-    overflow: hidden; /* Evita que o texto extrapole */
-}
-
-.produto img {
-    width: 100%;
-    height: auto;
-    max-height: 150px; /* Limita a altura da imagem */
-    object-fit: contain;
-}
-
-.produto p {
-    font-size: 14px;
-    line-height: 1.2;
-    max-height: 40px; /* Ajusta altura do parágrafo */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
+/* Descrição do produto */
 .produto p {
     font-size: 14px;
     line-height: 1.4;
@@ -121,31 +83,43 @@ html, body {
     display: -webkit-box;
     -webkit-line-clamp: 3; /* Define um limite de 3 linhas */
     -webkit-box-orient: vertical;
-    white-space: normal; /* Permite que o texto quebre */
+    white-space: normal;
 }
 
-
+/* Botão de compra */
 .produto button {
     display: block;
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #000;
-    color: #fff;
+    background-color: #003366;
+    color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .produto button:hover {
-    background-color: #444;
+    background-color: #ff6600;
 }
 
-.produto span {
-    font-weight: bold;
-    color: #ff6600;
-    display: block;
-    font-size: 1.1em;
-    font-weight: bold;
-    margin: 10px 0;
+/* Responsividade */
+@media (max-width: 768px) {
+    .produtos {
+        flex-wrap: wrap; /* Permite que os produtos quebrem a linha */
+        justify-content: center;
+    }
+
+    .produto {
+        flex: 0 0 calc(50% - 20px); /* Ajusta para dois produtos por linha */
+    }
+}
+
+@media (max-width: 480px) {
+    .produto {
+        flex: 0 0 100%; /* Um produto por linha em telas pequenas */
+    }
 }
