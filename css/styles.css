@@ -144,6 +144,42 @@ header h1 {
     background: #e65c00;
 }
 
+.depo1{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    font-style: italic;
+}
+
+.depo2{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    font-style: italic;
+}
+
+.cta{
+    background: #222;
+    color: white;
+    padding: 50px 20px;
+}
+
+#contato{
+    background: #222;
+    color: white;
+    padding: 50px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Rodapé */
 footer {
     margin-top: 20px;
