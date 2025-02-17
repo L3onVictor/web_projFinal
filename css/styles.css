@@ -176,16 +176,6 @@ header h1 {
     padding: 50px 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* Rodapé */
 footer {
     position: fixed;       /* Fixa o footer na parte inferior da tela */
@@ -196,5 +186,47 @@ footer {
     padding: 10px 0;
     text-align: center;
 }
+/* Seção Equipe */
+#equipe {
+    background: #fff;
+    padding: 50px 20px;
+}
 
-/*produtos*/
+#equipe h2 {
+    margin-bottom: 20px;
+}
+
+.membros {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.membro {
+    text-align: center;
+    max-width: 250px;
+}
+
+.membro img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Seção Endereço */
+#endereco {
+    background: #222;
+    color: white;
+    padding: 50px 20px;
+}
+
+/* Seção Mapa */
+#mapa {
+    background: #f4f4f4;
+    padding: 50px 20px;
+}
+
+.mapa-container {
+    max-width: 800px;
+    margin: auto;
+}

@@ -17,11 +17,10 @@
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="produtos.html">Produtos</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="#agendamento">Agendamento</a></li> <!-- Modificado para usar o ID -->
+                <li><a href="#agendamento">Agendamento</a></li>
             </ul>
         </nav>
 
-        <!-- Barra de Pesquisa -->
         <nav class="pesquisa-nav">
             <form class="search-form">
                 <input type="text" name="q" placeholder="Buscar..." required>
@@ -29,8 +28,8 @@
             <a href="registro.html" class="registro_botton">Registrar-se</a>
             <a href="login.html" class="login_botton">Login</a>
         </nav>
-
     </header>
+
     <section class="hero">
         <h2>Bem-vindo à Barbearia Moderna</h2>
         <p>Seu estilo, nossa paixão.</p>
@@ -55,16 +54,48 @@
         <a href="agendamento.html" class="btn">Agendar Agora</a>
     </section>
 
-    <section id="contato"> <!-- ID adicionado -->
-        <h1>Fale conosco</h1>
-        <p>Email: contato@barbeariamoderna.com</p>
-        <p>Telefone: (11) 99999-9999</p>
-        <p>Instagram: @seilaoque_eNois</p>
+    <!-- Seção da Equipe -->
+    <section id="equipe">
+        <h2>Nossa Equipe</h2>
+        <div class="equipe-container">
+            <div class="membro">
+                <img src="./img/barbeiro1.jpg" alt="Barbeiro João">
+                <h3>João Barbeiro</h3>
+                <p>Especialista em cortes clássicos e modernos.</p>
+            </div>
+            <div class="membro">
+                <img src="./img/barbeiro2.jpg" alt="Barbeiro Pedro">
+                <h3>Pedro Estilista</h3>
+                <p>Perito em barba e design de cortes.</p>
+            </div>
+            <div class="membro">
+                <img src="./img/barbeiro3.jpg" alt="Barbeiro Lucas">
+                <h3>Lucas Fade</h3>
+                <p>Fade perfeito e cortes degradê impecáveis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Endereço -->
+    <section id="endereco">
+        <h2>Nosso Endereço</h2>
+        <p>R. Dr. José Mariano, 267 - Santo Antônio, Garanhuns - PE</p>
+    </section>
+
+    <!-- Seção Mapa -->
+    <section id="mapa">
+        <h2>Como Chegar</h2>
+        <div class="mapa-container">
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d828.6809974262784!2d-36.49234976255374!3d-8.889506798385495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2sbr!4v1739825492280!5m2!1spt-PT!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Barbearia Moderna. Todos os direitos reservados.</p>
     </footer>
 </body>
-
 </html>
