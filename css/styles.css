@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+/* Garantir que o body e html ocupem toda a altura da tela */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -182,11 +188,13 @@ header h1 {
 
 /* Rodapé */
 footer {
-    margin-top: 20px;
-    background: #333;
+    position: fixed;       /* Fixa o footer na parte inferior da tela */
+    bottom: 0;             /* Alinha o footer na parte inferior da tela */
+    width: 100%;           /* Faz com que o footer ocupe toda a largura */
+    background-color: #333;
     color: white;
     padding: 10px 0;
-
+    text-align: center;
 }
 
 /*produtos*/

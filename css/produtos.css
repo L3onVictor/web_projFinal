@@ -10,9 +10,9 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
+.container-produtos
 /* Container de produtos */
-.produtos {
+.produtos-carrossel-auto, .produtos-carrossel-manual {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -37,6 +37,8 @@ html, body {
     background-color: #fff;
     overflow: hidden; /* Evita que o texto extrapole */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #000;
+    border-radius: 10px;
 }
 
 .produto:hover {
@@ -122,4 +124,62 @@ html, body {
     .produto {
         flex: 0 0 100%; /* Um produto por linha em telas pequenas */
     }
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center; /* Garante alinhamento vertical com os produtos */
+    justify-content: center;
+    overflow: hidden;
+}
+
+.produtos-carrossel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.produtos-carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Botões de navegação */
+.prev-btn, .next-btn {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background 0.3s;
+    top: 65%;
+}
+
+.prev-btn {
+    left: 5px;
+}
+
+.next-btn {
+    right: 5px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+h2{
+    padding: 15px;
 }
