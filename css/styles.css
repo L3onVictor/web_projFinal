@@ -186,6 +186,10 @@ footer {
     padding: 10px 0;
     text-align: center;
 }
+
+.footer-relativo{
+    position: relative;
+}
 /* Seção Equipe */
 #equipe {
     background: #fff;
