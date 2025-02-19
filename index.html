@@ -10,6 +10,43 @@
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 
 </head>
+<style>
+#quem-somos {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+.quem-somos-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.texto {
+    flex: 1;
+    max-width: 500px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.imagem {
+    flex: 1;
+    max-width: 450px;
+}
+
+.imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+</style>
 
 <body>
     <header>
@@ -30,13 +67,34 @@
         </nav>
     </header>
 
-    <!-- <section class="hero">
+     <section class="hero">
         <h2>Bem-vindo à Barbearia Moderna</h2>
+        <br>
+        <br>
         <p>Seu estilo, nossa paixão.</p>
+        <br>
+        <br>
         <a href="servicos.html" class="btn">Conheça nossos serviços</a>
-    </section> -->
+    </section>
+    <section id="quem-somos">
+        <h2>Quem Somos</h2>
+        <br>
+        <br>
+        <div class="quem-somos-container">
+            <div class="texto">
+                <p>Na <strong>Barbearia Moderna</strong>, acreditamos que um bom corte de cabelo vai além da estética – é uma experiência. Com anos de tradição e uma equipe altamente qualificada, oferecemos cortes, barbas e tratamentos capilares que combinam técnica, estilo e personalidade.</p>
+                
+                <p>Nosso objetivo é proporcionar um atendimento de excelência, em um ambiente confortável e sofisticado. Utilizamos os melhores produtos do mercado e acompanhamos as tendências para garantir que cada cliente saia satisfeito e confiante.</p>
     
-    <!-- <section class="depoimentos">
+                <p>Seja para um corte clássico, um visual moderno ou um momento de relaxamento, estamos aqui para transformar sua ida à barbearia em algo único!</p>
+            </div>
+            <div class="imagem">
+                <img src="images/barbearia.jpg" alt="Equipe da Barbearia Moderna">
+            </div>
+        </div>
+    </section>
+    
+     <section class="depoimentos">
         <h2>O que nossos clientes dizem</h2>
         <div class="depo1">
             <p>"Melhor atendimento e corte! Super recomendo!"</p>
@@ -46,7 +104,23 @@
             <p>"Ambiente incrível e equipe muito profissional!"</p>
             <p>- José Oliveira</p>
         </div>
-    </section> -->
+    </section>
+
+    <section id="contato">
+        <h2>Fale Conosco</h2>
+        <br>
+        <p>Agende seu horário ou tire dúvidas pelo WhatsApp:</p>
+        <br>
+        <a href="https://wa.me/seu-numero" class="btn">Falar no WhatsApp</a>
+        <br>
+        <p>Siga-nos nas redes sociais:</p>
+        <br>
+        <div class="redes-sociais">
+            <br>
+            <a href="https://www.instagram.com/sua-barbearia"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/sua-barbearia"><img src="images/facebook.png" alt="Facebook"></a>
+        </div>
+    </section>    
 
     <!-- Popup -->
     <div id="popup" class="popup">
@@ -63,7 +137,9 @@
     <!-- Seção da Equipe -->
     <section id="equipe">
         <h2>Conheça Nossa Equipe</h2>
+        <br>
         <div class="equipe-container">
+            <br>
             <div class="membro">
                 <img src="./images/barbeiro1.jpg" alt="Barbeiro João">
                 <h3>João Barbeiro</h3>
@@ -85,6 +161,7 @@
     <!-- Seção Endereço -->
     <section id="endereco">
         <h2>Nosso Endereço</h2>
+        <br>
         <p>R. Dr. José Mariano, 267 - Santo Antônio, Garanhuns - PE</p>
     </section>
 
@@ -104,5 +181,11 @@
         <p>&copy; 2025 Barbearia Moderna. Todos os direitos reservados.</p>
     </footer>
     <script src="js/popup.js"></script>
+
+    <!-- whatsapp-->
+    <a href="https://wa.me/seu-numero" class="whatsapp-button" target="_blank">
+        <img src="images/whatsapp-icon.png" alt="WhatsApp">
+    </a>
+    
 </body>
 </html>
