@@ -1,0 +1,79 @@
+/* Seção de Agendamento */
+.agendamento {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.agendamento h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.agendamento form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.agendamento label {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.agendamento input, .agendamento select, .agendamento textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.agendamento button {
+    background-color: #e65c00;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.agendamento button:hover {
+    background-color: #e65c00;
+}
+
+/* Seção de Serviços Agendados */
+.servicos-agendados {
+    margin: 30px auto;
+    max-width: 900px;
+}
+
+.servicos-agendados table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.servicos-agendados th, .servicos-agendados td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.servicos-agendados th {
+    background-color: #e68900;
+    color: white;
+}
+
+.servicos-agendados tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
