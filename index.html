@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbearia Moderna</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
@@ -30,13 +31,13 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <!-- <section class="hero">
         <h2>Bem-vindo à Barbearia Moderna</h2>
         <p>Seu estilo, nossa paixão.</p>
         <a href="servicos.html" class="btn">Conheça nossos serviços</a>
-    </section>
+    </section> -->
     
-    <section class="depoimentos">
+    <!-- <section class="depoimentos">
         <h2>O que nossos clientes dizem</h2>
         <div class="depo1">
             <p>"Melhor atendimento e corte! Super recomendo!"</p>
@@ -46,17 +47,23 @@
             <p>"Ambiente incrível e equipe muito profissional!"</p>
             <p>- José Oliveira</p>
         </div>
-    </section>
+    </section> -->
 
-    <section class="cta">
-        <h2>Agende seu horário</h2>
-        <p>Não perca tempo! Agende seu corte com a nossa equipe agora mesmo.</p>
-        <a href="agendamento.html" class="btn">Agendar Agora</a>
-    </section>
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <section class="cta">
+                <h2>Agende seu horário</h2>
+                <p>Não perca tempo! Agende seu corte com a nossa equipe agora mesmo.</p>
+                <a href="agendamento.html" class="btn">Agendar Agora</a>
+            </section>
+        </div>
+    </div>
 
     <!-- Seção da Equipe -->
     <section id="equipe">
-        <h2>Nossa Equipe</h2>
+        <h2>Conheça Nossa Equipe</h2>
         <div class="equipe-container">
             <div class="membro">
                 <img src="./img/barbeiro1.jpg" alt="Barbeiro João">
@@ -97,5 +104,6 @@
     <footer>
         <p>&copy; 2025 Barbearia Moderna. Todos os direitos reservados.</p>
     </footer>
+    <script src="js/popup.js"></script>
 </body>
 </html>
