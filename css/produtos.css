@@ -12,7 +12,7 @@ html, body {
 }
 .container-produtos
 /* Container de produtos */
-.produtos-carrossel-auto, .produtos-carrossel-manual {
+.produtos-carrossel-auto{
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -21,6 +21,31 @@ html, body {
     padding: 10px;
     scrollbar-width: none; /* Esconde a barra no Firefox */
     -ms-overflow-style: none; /* Esconde a barra no IE e Edge */
+}
+
+.produtos-carrossel-manual{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px;
+    scrollbar-width: none; /* Esconde a barra no Firefox */
+    -ms-overflow-style: none; /* Esconde a barra no IE e Edge */
+}
+
+.produtos-sem-carrossel{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px;
+    scrollbar-width: none; /* Esconde a barra no Firefox */
+    -ms-overflow-style: none; /* Esconde a barra no IE e Edge */
+    align-content: center;
+    justify-content: space-evenly;
+    
 }
 
 .produtos::-webkit-scrollbar {
