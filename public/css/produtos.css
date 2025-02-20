@@ -208,3 +208,23 @@ html, body {
 h2{
     padding: 15px;
 }
+
+/* TEMPORARIO */
+.produtos-carrossel-auto {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%; /* ou um valor fixo */
+}
+
+.produto {
+    width: 250px; /* Defina um tamanho fixo para os itens do carrossel */
+    margin-right: 20px; /* Espaçamento entre os itens */
+    flex-shrink: 0; /* Impede que os itens encolham */
+    text-align: center;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+}
