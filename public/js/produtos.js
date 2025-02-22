@@ -1,6 +1,12 @@
 window.addEventListener("load", main)
 
 let carrinho = []
+const carrinho_ls = localStorage.getItem("carrinho")
+if (carrinho_ls == null){
+    localStorage.setItem("carrinho", "[]")
+} else {
+    carrinho = JSON.parse(carrinho_ls);
+}
 
 const estoque = [
     {
@@ -124,7 +130,14 @@ function main() {
         const produto_id = evento.target.parentElement.id;
         const item = obterProdutoPorId(produto_id);
 
-        carrinho.push(item);
+        const produtoCarrinho = {
+            id: item.id,
+            nome: item.nome,
+            valor: item.valor
+        }
+
+        carrinho.push(produtoCarrinho);
+        localStorage.setItem("carrinho", JSON.stringify(carrinho))
     }
 
     function obterProdutoPorId (id){
