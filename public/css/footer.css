@@ -1,0 +1,15 @@
+
+/* Rodapé */
+footer {
+    position: fixed;       /* Fixa o footer na parte inferior da tela */
+    bottom: 0;             /* Alinha o footer na parte inferior da tela */
+    width: 100%;           /* Faz com que o footer ocupe toda a largura */
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-relativo{
+    position: relative;
+}
