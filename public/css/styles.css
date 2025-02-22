@@ -18,89 +18,6 @@ body {
     text-align: center;
 }
 
-/* Estilos para o cabeçalho */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #333;
-    color: white;
-    padding: 15px 20px;
-    position: relative;
-}
-
-header h1 {
-    margin: 0;
-    text-align: left;
-    flex: 1;
-}
-
-/* Centralizando o menu-nav */
-.menu-nav {
-    position: absolute; 
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.menu-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 30px;
-}
-
-.menu-nav ul li {
-    margin: 0;
-}
-
-.menu-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.menu-nav ul li a:hover {
-    color: #ff6600;
-}
-
-
-.pesquisa-nav {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 1; 
-    justify-content: flex-end; 
-}
-
-.search-form {
-    background: white;
-    border-radius: 50px;
-    padding: 0px;
-    display: flex;
-    align-items: center;
-    flex: 1;
-    max-width: 300px;
-    border: none;
-    box-shadow: none;
-    height: 30px;
-}
-
-.search-form input {
-    border: none;
-    padding: 8px;
-    font-size: 14px;
-    outline: none;
-    flex: 1;
-    background: transparent;
-    border-radius: 100px;
-}
-
-.search-form input:focus {
-    box-shadow: none;
-}
-
 /* Botões de login e registro */
 .login_botton, .registro_botton {
     padding: 8px 15px;
@@ -174,21 +91,6 @@ header h1 {
     background: #222;
     color: white;
     padding: 50px 20px;
-}
-
-/* Rodapé */
-footer {
-    position: fixed;       /* Fixa o footer na parte inferior da tela */
-    bottom: 0;             /* Alinha o footer na parte inferior da tela */
-    width: 100%;           /* Faz com que o footer ocupe toda a largura */
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-.footer-relativo{
-    position: relative;
 }
 /* Seção Equipe */
 #equipe {
