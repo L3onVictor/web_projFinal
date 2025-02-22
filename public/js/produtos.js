@@ -1,5 +1,7 @@
 window.addEventListener("load", main)
 
+let carrinho = []
+
 const estoque = [
     {
         id: "produto-0",
@@ -81,8 +83,7 @@ const estoque = [
 ]
 
 function main() {
-    const produtos_promocao = document.getElementsByClassName("produtos-promocao")[0]
-    const produtos_estoque = document.getElementsByClassName("produtos-estoque")[0]
+    const produtos_estoque = document.getElementsByClassName("produtos-promocao")[0]
     // Cria os elementos em memoria
 
     for (let x = 0; x <= 10; x++) {
@@ -96,12 +97,16 @@ function main() {
 
         // Preencher com as informações dos produtos
 
+        produto.id = estoque[x].id;
+
         img.src = estoque[x].img;
         nome.textContent = estoque[x].nome;
         descricao.textContent = estoque[x].descricao;
-        valor.textContent = `Preço: R$ ${estoque[x].valor}0`
+        valor.textContent = `Preço: R$ ${estoque[x].valor}`
 
         button.textContent = `Adicionar ao carrinho`
+
+        button.addEventListener("click", adicionarProdutoNoCarrinho);
 
         // Montar a estrutura do DOM e a adiciona ao HTML
 
@@ -111,7 +116,23 @@ function main() {
         produto.appendChild(valor)
         produto.appendChild(button)
         produto.classList.add("produto")
-        produtos_promocao.appendChild(produto);
+        produtos_estoque.appendChild(produto);
 
+    }
+
+    function adicionarProdutoNoCarrinho (evento) {
+        const produto_id = evento.target.parentElement.id;
+        const item = obterProdutoPorId(produto_id);
+
+        carrinho.push(item);
+    }
+
+    function obterProdutoPorId (id){
+        for (let produto of estoque){
+            if (produto.id === id){
+                return produto
+            }
+        }
+        return null;
     }
 }
