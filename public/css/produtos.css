@@ -10,46 +10,16 @@ html, body {
     margin: 0;
     padding: 0;
 }
-.container-produtos
-/* Container de produtos */
-.produtos-carrossel-auto{
+.produtos-promocao{
+    justify-content: center;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     overflow-x: auto;
     scroll-behavior: smooth;
     gap: 20px;
     padding: 10px;
     scrollbar-width: none; /* Esconde a barra no Firefox */
     -ms-overflow-style: none; /* Esconde a barra no IE e Edge */
-}
-
-.produtos-carrossel-manual{
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 20px;
-    padding: 10px;
-    scrollbar-width: none; /* Esconde a barra no Firefox */
-    -ms-overflow-style: none; /* Esconde a barra no IE e Edge */
-}
-
-.produtos-sem-carrossel{
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 20px;
-    padding: 10px;
-    scrollbar-width: none; /* Esconde a barra no Firefox */
-    -ms-overflow-style: none; /* Esconde a barra no IE e Edge */
-    align-content: center;
-    justify-content: space-evenly;
-    
-}
-
-.produtos::-webkit-scrollbar {
-    display: none; /* Esconde a barra no Chrome e Safari */
 }
 
 /* Produto individual */
@@ -133,37 +103,6 @@ html, body {
     background-color: #ff6600;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .produtos {
-        flex-wrap: wrap; /* Permite que os produtos quebrem a linha */
-        justify-content: center;
-    }
-
-    .produto {
-        flex: 0 0 calc(50% - 20px); /* Ajusta para dois produtos por linha */
-    }
-}
-
-@media (max-width: 480px) {
-    .produto {
-        flex: 0 0 100%; /* Um produto por linha em telas pequenas */
-    }
-}
-
-.carousel-container {
-    position: relative;
-    overflow: hidden;
-}
-
-.carousel-container {
-    position: relative;
-    display: flex;
-    align-items: center; /* Garante alinhamento vertical com os produtos */
-    justify-content: center;
-    overflow: hidden;
-}
-
 .produtos-carrossel {
     display: flex;
     overflow-x: auto;
@@ -178,43 +117,8 @@ html, body {
     display: none;
 }
 
-/* Botões de navegação */
-.prev-btn, .next-btn {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 10;
-    font-size: 24px;
-    border-radius: 50%;
-    transition: background 0.3s;
-    top: 65%;
-}
-
-.prev-btn {
-    left: 5px;
-}
-
-.next-btn {
-    right: 5px;
-}
-
-.prev-btn:hover, .next-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
 h2{
     padding: 15px;
-}
-
-/* TEMPORARIO */
-.produtos-carrossel-auto {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    width: 100%; /* ou um valor fixo */
 }
 
 .produto {
