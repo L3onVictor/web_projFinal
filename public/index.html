@@ -10,44 +10,47 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <script src="js/popup.js" defer></script>
+    <script src="js/equipe.js" defer></script>
 
 </head>
+
 <style>
-#quem-somos {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f8f8f8;
-}
+    #quem-somos {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #f8f8f8;
+    }
 
-.quem-somos-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    gap: 20px;
-}
+    .quem-somos-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        gap: 20px;
+    }
 
-.texto {
-    flex: 1;
-    max-width: 500px;
-    text-align: justify;
-    font-size: 18px;
-    line-height: 1.6;
-}
+    .texto {
+        flex: 1;
+        max-width: 500px;
+        text-align: justify;
+        font-size: 18px;
+        line-height: 1.6;
+    }
 
-.imagem {
-    flex: 1;
-    max-width: 450px;
-}
+    .imagem {
+        flex: 1;
+        max-width: 450px;
+    }
 
-.imagem img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
+    .imagem img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
 </style>
 
 <body>
@@ -82,127 +85,122 @@
             </a>
         </nav>
     </header>
+    <main>
 
-     <section class="hero">
-        <h2>Bem-vindo à Lider Barbershop</h2>
-        <br>
-        <br>
-        <p>Seu estilo, nossa paixão.</p>
-        <br>
-        <br>
-        <a href="servicos.html" class="btn">Conheça nossos serviços</a>
-    </section>
-    <section id="quem-somos">
-        <h2>Quem Somos</h2>
-        <br>
-        <br>
-        <div class="quem-somos-container">
-            <div class="texto">
-                <p>Na <strong>Lider Barbershop</strong>, acreditamos que um bom corte de cabelo vai além da estética – é uma experiência. Com anos de tradição e uma equipe altamente qualificada, oferecemos cortes, barbas e tratamentos capilares que combinam técnica, estilo e personalidade.</p>
-                
-                <p>Nosso objetivo é proporcionar um atendimento de excelência, em um ambiente confortável e sofisticado. Utilizamos os melhores produtos do mercado e acompanhamos as tendências para garantir que cada cliente saia satisfeito e confiante.</p>
-    
-                <p>Seja para um corte clássico, um visual moderno ou um momento de relaxamento, estamos aqui para transformar sua ida à barbearia em algo único!</p>
-            </div>
-            <div class="imagem">
-                <img src="images/logo.png" alt="Equipe da Lider Barbershop">
-            </div>
-        </div>
-    </section>
-    
-     <section class="depoimentos">
-        <h2>O que nossos clientes dizem</h2>
-        <div class="depo1">
-            <p>"Melhor atendimento e corte! Super recomendo!"</p>
-            <p>- João Silva</p>
-        </div>
-        <div class="depo2">
-            <p>"Ambiente incrível e equipe muito profissional!"</p>
-            <p>- José Oliveira</p>
-        </div>
-    </section>
-
-    <section id="contato">
-        <h2>Fale Conosco</h2>
-        <br>
-        <p>Agende seu horário ou tire dúvidas pelo WhatsApp:</p>
-        <br>
-        <a href="https://wa.me/seu-numero" class="btn">Falar no WhatsApp</a>
-        <br>
-        <br>
-        <p>Siga-nos nas redes sociais:</p>
-        <br>
-        <div class="redes-sociais">
+        <section class="hero">
+            <h2>Bem-vindo à Lider Barbershop</h2>
             <br>
-            <a href="https://www.instagram.com/sua-barbearia"><img src="images/instagram-1-svgrepo-com.svg" alt="Instagram"></a>
-            <a href="https://www.facebook.com/sua-barbearia"><img src="images/facebook-color-svgrepo-com.svg" alt="Facebook"></a>
-        </div>
-    </section>    
-
-    <!-- Popup -->
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close-btn">&times;</span>
-            <section class="cta">
-                <h2>Agende seu horário</h2>
-                <p>Não perca tempo! Agende seu corte com a nossa equipe agora mesmo.</p>
-                <a href="agendamentos.html" class="btn">Agendar Agora</a>
-            </section>
-        </div>
-    </div>
-
-    <!-- Seção da Equipe -->
-    <section id="equipe">
-        <h2>Conheça Nossa Equipe</h2>
-        <br>
-        <div class="equipe-container">
             <br>
-            <div class="membro">
-                <img src="./images/barbeiro1.jpg" alt="Barbeiro João">
-                <h3>João Barbeiro</h3>
-                <p>Especialista em cortes clássicos e modernos.</p>
+            <p>Seu estilo, nossa paixão.</p>
+            <br>
+            <br>
+            <a href="servicos.html" class="btn">Conheça nossos serviços</a>
+        </section>
+        <section id="quem-somos">
+            <h2>Quem Somos</h2>
+            <br>
+            <br>
+            <div class="quem-somos-container">
+                <div class="texto">
+                    <p>Na <strong>Lider Barbershop</strong>, acreditamos que um bom corte de cabelo vai além da estética
+                        – é uma experiência. Com anos de tradição e uma equipe altamente qualificada, oferecemos cortes,
+                        barbas e tratamentos capilares que combinam técnica, estilo e personalidade.</p>
+
+                    <p>Nosso objetivo é proporcionar um atendimento de excelência, em um ambiente confortável e
+                        sofisticado. Utilizamos os melhores produtos do mercado e acompanhamos as tendências para
+                        garantir que cada cliente saia satisfeito e confiante.</p>
+
+                    <p>Seja para um corte clássico, um visual moderno ou um momento de relaxamento, estamos aqui para
+                        transformar sua ida à barbearia em algo único!</p>
+                </div>
+                <div class="imagem">
+                    <img src="images/logo.png" alt="Equipe da Lider Barbershop">
+                </div>
             </div>
-            <div class="membro">
-                <img src="./images/barbeiro2.jpg" alt="Barbeiro Pedro">
-                <h3>Pedro Estilista</h3>
-                <p>Perito em barba e design de cortes.</p>
+        </section>
+
+        <section class="depoimentos">
+            <h2>O que nossos clientes dizem</h2>
+            <div class="depo1">
+                <p>"Melhor atendimento e corte! Super recomendo!"</p>
+                <p>- João Silva</p>
             </div>
-            <div class="membro">
-                <img src="./images/barbeiro3.jpg" alt="Barbeiro Lucas">
-                <h3>Lucas Fade</h3>
-                <p>Fade perfeito e cortes degradê impecáveis.</p>
+            <div class="depo2">
+                <p>"Ambiente incrível e equipe muito profissional!"</p>
+                <p>- José Oliveira</p>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Fale Conosco</h2>
+            <br>
+            <p>Agende seu horário ou tire dúvidas pelo WhatsApp:</p>
+            <br>
+            <a href="https://wa.me/seu-numero" class="btn">Falar no WhatsApp</a>
+            <br>
+            <br>
+            <p>Siga-nos nas redes sociais:</p>
+            <br>
+            <div class="redes-sociais">
+                <br>
+                <a href="https://www.instagram.com/sua-barbearia"><img src="images/socialmedia/instagram-1-svgrepo-com.svg"
+                        alt="Instagram"></a>
+                <a href="https://www.facebook.com/sua-barbearia"><img src="images/socialmedia/facebook-color-svgrepo-com.svg"
+                        alt="Facebook"></a>
+            </div>
+        </section>
+
+        <!-- Popup -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <section class="cta">
+                    <h2>Agende seu horário</h2>
+                    <p>Não perca tempo! Agende seu corte com a nossa equipe agora mesmo.</p>
+                    <a href="agendamentos.html" class="btn">Agendar Agora</a>
+                </section>
             </div>
         </div>
-    </section>
 
-    <!-- Seção Endereço -->
-    <section id="endereco">
-        <h2>Nosso Endereço</h2>
-        <br>
-        <p>R. Dr. José Mariano, 267 - Santo Antônio, Garanhuns - PE</p>
-    </section>
+        <!-- Seção da Equipe -->
+        <section id="equipe">
+            <h2>Conheça Nossa Equipe</h2>
+            <br>
+            <div class="equipe-container">
+                <br>
+            </div>
+        </section>
 
-    <!-- Seção Mapa -->
-    <section id="mapa">
-        <h2>Como Chegar</h2>
-        <div class="mapa-container">
-            <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d828.6809974262784!2d-36.49234976255374!3d-8.889506798385495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2sbr!4v1739825492280!5m2!1spt-PT!2sbr"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-            
-        </div>
-    </section>
+        <!-- Seção Endereço -->
+        <section id="endereco">
+            <h2>Nosso Endereço</h2>
+            <br>
+            <p>R. Dr. José Mariano, 267 - Santo Antônio, Garanhuns - PE</p>
+        </section>
 
+        <!-- Seção Mapa -->
+        <section id="mapa">
+            <h2>Como Chegar</h2>
+            <div class="mapa-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d828.6809974262784!2d-36.49234976255374!3d-8.889506798385495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2sbr!4v1739825492280!5m2!1spt-PT!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+        </section>
+
+    </main>
     <footer class="footer-relativo">
         <p>&copy; 2025 Lider Barbershop. Todos os direitos reservados.</p>
     </footer>
-    <script src="js/popup.js"></script>
 
     <!-- whatsapp-->
     <a href="https://wa.me/seu-numero" class="whatsapp-button" target="_blank">
-        <img src="images/whatsapp-svgrepo-com.svg" alt="WhatsApp">
+        <img src="images/socialmedia/whatsapp-svgrepo-com.svg" alt="WhatsApp">
     </a>
-    
+
 </body>
+
 </html>
