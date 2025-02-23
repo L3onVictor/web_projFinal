@@ -200,7 +200,29 @@
     <a href="https://wa.me/seu-numero" class="whatsapp-button" target="_blank">
         <img src="images/socialmedia/whatsapp-svgrepo-com.svg" alt="WhatsApp">
     </a>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const token = localStorage.getItem("token");
+    const menu = document.getElementById("menu");
 
+    if (token) {
+        
+        menu.innerHTML = `<button id="logout">Sair</button>`;
+
+        document.getElementById("logout").addEventListener("click", () => {
+            localStorage.removeItem("token"); 
+            window.location.reload(); 
+        });
+    } else {
+       
+        menu.innerHTML = `
+            <a href="login.html">Login</a>
+            <a href="registro.html">Registrar</a>
+        `;
+    }
+});
+
+</script>
 </body>
 
 </html>

@@ -59,6 +59,40 @@
         <p>&copy; 2025 Líder Barbershop. Todos os direitos reservados.</p>
     </footer>
 
+    <script>
+        document.getElementById("registro-form").addEventListener("submit", async function(event) {
+            event.preventDefault(); 
+
+           
+            const nome = document.getElementById("new-username").value;
+            const email = document.getElementById("new-email").value;
+            const senha = document.getElementById("new-password").value;
+
+            try {
+               
+                const resposta = await fetch("http://localhost:55555/auth/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ nome, email, senha })
+                });
+
+                const dados = await resposta.json(); 
+
+               
+                alert(dados.mensagem);
+
+               
+                if (dados.sucesso) {
+                    window.location.href = "login.html";
+                }
+            } catch (erro) {
+                console.error("Erro ao registrar usuário:", erro);
+                alert("Erro ao registrar. Tente novamente mais tarde.");
+            }
+        });
+    </script>
+</body>
+</html>
 
 
 </body>

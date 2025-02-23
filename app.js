@@ -1,19 +1,22 @@
 import express from 'express';
-import authRoutes from './routes/auth.js';
+import cors from 'cors';
+import authRoutes from './routes/registro.js';
+import loginRoutes from './routes/login.js';
 
 const app = express();
 const porta = 55555;
 
-// Middleware para processar JSON
-app.use(express.json());
 
-// 🔹 Middleware para servir arquivos estáticos
-app.use(express.static('public'));
+app.use(express.json());
+app.use(cors()); 
 
 // Definir rotas
 app.use('/auth', authRoutes);
+app.use('/auth', loginRoutes);
+
+app.use(express.static('public'));
 
 // Iniciar servidor
 app.listen(porta, () => {
-    console.log(`Servidor rodando em http://localhost:${porta}`);
+    console.log(`Servidor rodando em localhost:${porta}`);
 });

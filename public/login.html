@@ -25,7 +25,7 @@
 
     <section class="auth-section">
         <h2>Login</h2>
-        <form action="#" method="POST" class="auth-form">
+        <form id="login-form" class="auth-form">
             <div class="form-group">
                 <label for="username">Usuário:</label>
                 <input type="text" id="username" name="username" required placeholder="Digite seu usuário">
@@ -49,5 +49,34 @@
     <footer>
         <p>&copy; 2025 Líder Barbershop. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById("username").value;
+            const senha = document.getElementById("password").value;
+
+            try {
+                const resposta = await fetch("http://localhost:55555/auth/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ nome, senha })
+                });
+
+                const dados = await resposta.json();
+
+                alert(dados.mensagem);
+
+                if (dados.sucesso) {
+                    window.location.href = "index.html"; 
+                }
+            } catch (erro) {
+                console.error("Erro no login:", erro);
+                alert("Erro ao tentar fazer login. Tente novamente!");
+            }
+        });
+    </script>
+
 </body>
 </html>
