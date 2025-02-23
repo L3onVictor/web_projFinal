@@ -13,7 +13,7 @@ async function adicionarUsuario(nome, email, senha) {
         
         const hashSenha = await bcrypt.hash(senha, 10);
 
-        
+
         await db.run(
             "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)",
             [nome, email, hashSenha]

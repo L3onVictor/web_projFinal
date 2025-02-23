@@ -70,7 +70,7 @@
 
             try {
                
-                const resposta = await fetch("http://localhost:55555/auth/", {
+                const resposta = await fetch("http://localhost:55555/api/registro", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ nome, email, senha })

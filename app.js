@@ -11,8 +11,8 @@ app.use(express.json());
 app.use(cors()); 
 
 // Definir rotas
-app.use('/auth', authRoutes);
-app.use('/auth', loginRoutes);
+app.use('/api', authRoutes);
+app.use('/api', loginRoutes);
 
 app.use(express.static('public'));
 
