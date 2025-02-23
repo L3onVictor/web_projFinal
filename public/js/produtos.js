@@ -1,6 +1,25 @@
-window.addEventListener("load", main)
+window.addEventListener("load", main);
 
-let carrinho = []
+let nQtdItens = 0;
+let qtd_itens = localStorage.getItem("qtd_itens");
+if (qtd_itens === null || qtd_itens === "0") {
+    localStorage.setItem("qtd_itens", 0);
+} else {
+    if (parseInt(qtd_itens) < 9) {
+        nQtdItens = parseInt(qtd_itens);
+    } else {
+        nQtdItens = "+9";
+        qtd_itens = "+9";
+    }
+}
+
+let carrinho = [];
+const carrinho_ls = localStorage.getItem("carrinho");
+if (carrinho_ls == null) {
+    localStorage.setItem("carrinho", "[]");
+} else {
+    carrinho = JSON.parse(carrinho_ls);
+}
 
 const estoque = [
     {
@@ -83,11 +102,10 @@ const estoque = [
 ]
 
 function main() {
-    const produtos_estoque = document.getElementsByClassName("produtos-promocao")[0]
-    // Cria os elementos em memoria
+    const produtos_estoque = document.getElementsByClassName("produtos-promocao")[0];
 
-    for (let x = 0; x <= 10; x++) {
-
+    // Cria os elementos em memória
+    for (let x = 0; x < estoque.length; x++) {
         const produto = document.createElement("div");
         const img = document.createElement("img");
         const nome = document.createElement("h3");
@@ -96,43 +114,64 @@ function main() {
         const button = document.createElement("button");
 
         // Preencher com as informações dos produtos
-
         produto.id = estoque[x].id;
-
         img.src = estoque[x].img;
         nome.textContent = estoque[x].nome;
         descricao.textContent = estoque[x].descricao;
-        valor.textContent = `Preço: R$ ${estoque[x].valor}`
-
-        button.textContent = `Adicionar ao carrinho`
+        valor.textContent = `Preço: R$ ${estoque[x].valor}`;
+        button.textContent = `Adicionar ao carrinho`;
 
         button.addEventListener("click", adicionarProdutoNoCarrinho);
 
         // Montar a estrutura do DOM e a adiciona ao HTML
-
-        produto.appendChild(img)
-        produto.appendChild(nome)
-        produto.appendChild(descricao)
-        produto.appendChild(valor)
-        produto.appendChild(button)
-        produto.classList.add("produto")
+        produto.appendChild(img);
+        produto.appendChild(nome);
+        produto.appendChild(descricao);
+        produto.appendChild(valor);
+        produto.appendChild(button);
+        produto.classList.add("produto");
         produtos_estoque.appendChild(produto);
-
     }
 
-    function adicionarProdutoNoCarrinho (evento) {
+    function adicionarProdutoNoCarrinho(evento) {
         const produto_id = evento.target.parentElement.id;
         const item = obterProdutoPorId(produto_id);
 
-        carrinho.push(item);
+        const produtoCarrinho = {
+            id: item.id,
+            nome: item.nome,
+            valor: item.valor
+        };
+
+        carrinho.push(produtoCarrinho);
+        if (nQtdItens < 9) {
+            nQtdItens++;
+        } else {
+            nQtdItens = "+9";
+        }
+        localStorage.setItem("qtd_itens", nQtdItens);
+        localStorage.setItem("carrinho", JSON.stringify(carrinho));
+        console.log(`Total de itens adicionados: ${nQtdItens}`);
+        atualizarVisorQtdItens();
     }
 
-    function obterProdutoPorId (id){
-        for (let produto of estoque){
-            if (produto.id === id){
-                return produto
+    function obterProdutoPorId(id) {
+        for (let produto of estoque) {
+            if (produto.id === id) {
+                return produto;
             }
         }
         return null;
     }
+
+    function atualizarVisorQtdItens() {
+        const novoVisor = document.createElement("span");
+        novoVisor.textContent = nQtdItens;
+        novoVisor.classList.add("totalitens-carrinho");
+        document.querySelector(".carrinho").appendChild(novoVisor); // Adiciona o visor ao ícone do carrinho
+    }
+
+    // Chame essa função sempre que o número de itens mudar
+    atualizarVisorQtdItens();
+
 }
