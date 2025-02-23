@@ -1,0 +1,69 @@
+/* Estilização do container principal */
+.carrinho-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização de cada item do carrinho */
+.produto-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    gap: 10px;
+}
+
+/* Nome e preço do produto */
+.produto-carrinho p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Quantidade */
+.quantidade {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    color: #333;
+}
+
+/* Botões de adicionar e remover */
+.adicionar-produto, .remover-produto {
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.adicionar-produto:hover {
+    background-color: #0056b3;
+}
+
+.remover-produto {
+    background-color: #dc3545;
+}
+
+.remover-produto:hover {
+    background-color: #a71d2a;
+}
+
+/* Mensagem de carrinho vazio */
+.total-itens p {
+    text-align: center;
+    font-size: 16px;
+    color: #777;
+}

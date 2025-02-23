@@ -102,7 +102,7 @@ const estoque = [
 ]
 
 function main() {
-    const produtos_estoque = document.getElementsByClassName("produtos-promocao")[0];
+    const produtos_estoque = document.getElementsByClassName("produtos")[0];
 
     // Cria os elementos em memória
     for (let x = 0; x < estoque.length; x++) {
