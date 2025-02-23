@@ -1,7 +1,7 @@
 import { db } from "./db.js";
 
 async function criarTabelas() {
-    await db.run(`
+    await db.exec(`
         CREATE TABLE IF NOT EXISTS usuarios (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             nome TEXT NOT NULL,
@@ -14,4 +14,4 @@ async function criarTabelas() {
 
 criarTabelas();
 
-// db.run("Drop table usuarios")
+// db.exec('drop table usuarios')
