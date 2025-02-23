@@ -1,0 +1,23 @@
+.galeria{
+    padding: 10px;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+.interior{
+    padding: 10px;
+    flex-wrap: wrap;
+    margin: 10px auto;
+
+}
+.galeria img{
+    padding: 10px;
+    width: 400px;
+    height: 300px;
+    border: 1px solid;
+}
+.clientes{
+    padding: 10px;
+    flex-wrap: wrap;
+    margin: 10px auto;
+
+}
