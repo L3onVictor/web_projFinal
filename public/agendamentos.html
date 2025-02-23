@@ -50,12 +50,14 @@
             <!-- Formulário de Agendamento -->
             <form action="processar_agendamento.php" method="POST">
                 <label for="servico">Escolha o Serviço:</label>
-                <select id="servico" name="servico" required>
-                    <option value="corte">Corte de Cabelo</option>
-                    <option value="barba">Barba e Bigode</option>
-                    <option value="hidratacao">Hidratação Capilar</option>
-                    <option value="massagem">Massagem Relaxante</option>
-                </select>
+<select id="servico" name="servico" required>
+    <option value="corte" data-preco="30">Corte de Cabelo - R$30,00</option>
+    <option value="barba" data-preco="25">Barba e Bigode - R$25,00</option>
+    <option value="hidratacao" data-preco="40">Hidratação Capilar - R$40,00</option>
+    <option value="massagem" data-preco="50">Massagem Relaxante - R$50,00</option>
+</select>
+
+
 
                 <label for="nome">Nome Completo:</label>
                 <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
@@ -79,9 +81,8 @@
         <!-- Seção de Serviços Agendados -->
         <section class="servicos-agendados">
             <h2>Serviços Agendados</h2>
-            <p>Veja abaixo os serviços que você já agendou.</p>
-
-            <table>
+            <p id="mensagem-agendamento">Nenhum agendamento foi realizado.</p>
+            <table id="tabela-agendamentos" style="display: none;">
                 <thead>
                     <tr>
                         <th>Serviço</th>
@@ -90,23 +91,9 @@
                         <th>Hora</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <!-- Exemplo de serviço agendado -->
-                    <tr>
-                        <td>Corte de Cabelo</td>
-                        <td>João Silva</td>
-                        <td>2025-02-20</td>
-                        <td>14:00</td>
-                    </tr>
-                    <tr>
-                        <td>Massagem Relaxante</td>
-                        <td>Maria Oliveira</td>
-                        <td>2025-02-21</td>
-                        <td>16:30</td>
-                    </tr>
-                </tbody>
             </table>
         </section>
+    </main>
 
         <!-- Seção de Contato -->
         <section id="contato">
@@ -124,5 +111,6 @@
     <a href="https://wa.me/seu-numero" class="whatsapp-button" target="_blank">
         <img src="images/socialmedia/whatsapp-svgrepo-com.svg" alt="WhatsApp">
     </a>
+    <script src="./js/agendamento.js" defer></script>
 </body>
 </html>
