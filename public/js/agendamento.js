@@ -5,69 +5,103 @@ document.addEventListener("DOMContentLoaded", function () {
     const tbody = document.createElement("tbody");
     tabela.appendChild(tbody);
 
-    // Carrega agendamentos salvos
-    function carregarAgendamentos() {
-        const agendamentos = JSON.parse(localStorage.getItem("agendamentos")) || [];
+    // Função para carregar os agendamentos do banco de dados
+    async function carregarAgendamentos() {
+        try {
+            const response = await fetch("/api/agendamento"); // Requisição para pegar os agendamentos
+            const agendamentos = await response.json();
 
-        // Limpa tabela
-        tbody.innerHTML = "";
+            // Limpa tabela
+            tbody.innerHTML = "";
 
-        if (agendamentos.length === 0) {
-            mensagem.style.display = "block";
-            tabela.style.display = "none";
-        } else {
-            mensagem.style.display = "none";
-            tabela.style.display = "table";
-            
-            agendamentos.forEach((agendamento, index) => {
-                const row = tbody.insertRow();
-                row.innerHTML = `
-                    <td>${agendamento.servico}</td>
-                    <td>${agendamento.nome}</td>
-                    <td>${agendamento.data}</td>
-                    <td>${agendamento.hora}</td>
-                    <td><button class="remover" data-index="${index}">Cancelar</button></td>
-                `;
-            });
+            if (agendamentos.length === 0) {
+                mensagem.style.display = "block";
+                tabela.style.display = "none";
+            } else {
+                mensagem.style.display = "none";
+                tabela.style.display = "table";
+
+                agendamentos.forEach((agendamento) => {
+                    const row = tbody.insertRow();
+                    row.innerHTML = `
+                        <td>${agendamento.servico}</td>
+                        <td>${agendamento.nome}</td>
+                        <td>${agendamento.data}</td>
+                        <td>${agendamento.hora}</td>
+                        <td>${agendamento.telefone}</td>
+                        <td>${agendamento.observacao}</td>
+                        <td><button class="remover" data-id="${agendamento.id}">Cancelar</button></td>
+                    `;
+                });
+            }
+        } catch (error) {
+            console.error("Erro ao carregar agendamentos:", error);
         }
     }
 
-    // Salva um novo agendamento
-    form.addEventListener("submit", function (event) {
+    // Salvar um novo agendamento no banco de dados
+    form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
         const servico = document.getElementById("servico").options[document.getElementById("servico").selectedIndex].text;
         const nome = document.getElementById("nome").value;
         const data = document.getElementById("data").value;
         const hora = document.getElementById("hora").value;
+        const telefone = document.getElementById("telefone").value;
+        const observacao = document.getElementById("observacoes").value;
 
-        if (!nome || !data || !hora) {
+        if (!nome || !data || !hora || !telefone) {
             alert("Por favor, preencha todos os campos obrigatórios.");
             return;
         }
 
-        const novoAgendamento = { servico, nome, data, hora };
+        const novoAgendamento = { servico, nome, data, hora, telefone, observacao };
 
-        // Adiciona ao localStorage
-        const agendamentos = JSON.parse(localStorage.getItem("agendamentos")) || [];
-        agendamentos.push(novoAgendamento);
-        localStorage.setItem("agendamentos", JSON.stringify(agendamentos));
+        try {
+            const response = await fetch("/api/agendamento", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(novoAgendamento),
+            });
 
-        form.reset();
-        carregarAgendamentos();
-    });
-
-    // Remove um agendamento
-    tabela.addEventListener("click", function (event) {
-        if (event.target.classList.contains("remover")) {
-            const index = event.target.getAttribute("data-index");
-            const agendamentos = JSON.parse(localStorage.getItem("agendamentos"));
-            agendamentos.splice(index, 1);
-            localStorage.setItem("agendamentos", JSON.stringify(agendamentos));
-            carregarAgendamentos();
+            if (response.ok) {
+                form.reset();
+                carregarAgendamentos();
+            } else {
+                alert("Erro ao agendar. Tente novamente.");
+            }
+        } catch (error) {
+            console.error("Erro ao salvar agendamento:", error);
         }
     });
 
-    // Carregar os agendamentos ao abrir a página
+    // Remover um agendamento do banco de dados
+    tabela.addEventListener("click", async function (event) {
+        if (event.target.classList.contains("remover")) {
+            const id = event.target.getAttribute("data-id");
+
+            try {
+                const response = await fetch(`/api/agendamento/${id}`, { method: "DELETE" });
+
+                if (response.ok) {
+                    carregarAgendamentos();
+                } else {
+                    alert("Erro ao cancelar o agendamento.");
+                }
+            } catch (error) {
+                console.error("Erro ao remover agendamento:", error);
+            }
+        }
+    });
+
+    function definirServico() {
+        const params = new URLSearchParams(window.location.search);
+        const servicoSelecionado = params.get("servico");
+        if (servicoSelecionado) {
+            document.getElementById("servico").value = servicoSelecionado;
+        }
+    }
+
+    definirServico();
     carregarAgendamentos();
 });
