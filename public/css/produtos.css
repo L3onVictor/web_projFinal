@@ -18,12 +18,13 @@ html, body {
     scroll-behavior: smooth;
     gap: 20px;
     padding: 10px;
-    scrollbar-width: none; /* Esconde a barra no Firefox */
-    -ms-overflow-style: none; /* Esconde a barra no IE e Edge */
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
 
 /* Produto individual */
 .produto {
+    display: flex;
     flex: 0 0 250px; /* Largura fixa */
     text-align: center;
     padding: 15px;
@@ -34,6 +35,9 @@ html, body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid #000;
     border-radius: 10px;
+    justify-content: flex-end;
+    align-content: center;
+    flex-direction: column;
 }
 
 .produto:hover {
@@ -78,7 +82,7 @@ html, body {
     max-height: 60px; /* Permite no máximo 3 linhas */
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Define um limite de 3 linhas */
+    /* -webkit-line-clamp: 3; Define um limite de 3 linhas */
     -webkit-box-orient: vertical;
     white-space: normal;
 }
@@ -103,28 +107,14 @@ html, body {
     background-color: #ff6600;
 }
 
-.produtos-carrossel {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 20px;
-    padding: 10px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.produtos-carrossel::-webkit-scrollbar {
-    display: none;
-}
-
 h2{
     padding: 15px;
 }
 
 .produto {
-    width: 250px; /* Defina um tamanho fixo para os itens do carrossel */
-    margin-right: 20px; /* Espaçamento entre os itens */
-    flex-shrink: 0; /* Impede que os itens encolham */
+    width: 250px;
+    margin-right: 20px; 
+    flex-shrink: 0; 
     text-align: center;
 }
 

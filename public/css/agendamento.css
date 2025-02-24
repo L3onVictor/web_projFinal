@@ -50,6 +50,7 @@
 .agendamento button:hover {
     background-color: #e65c00;
 }
+/* Seção de Agendamento */
 
 /* Seção de Serviços Agendados */
 .servicos-agendados {
@@ -77,3 +78,4 @@
 .servicos-agendados tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+/* Seção de Serviços Agendados */
