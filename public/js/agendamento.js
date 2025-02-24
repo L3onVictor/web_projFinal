@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const tbody = document.createElement("tbody");
     tabela.appendChild(tbody);
 
-    // Função para carregar os agendamentos do banco de dados
+    
     async function carregarAgendamentos() {
         try {
-            const response = await fetch("/api/agendamento"); // Requisição para pegar os agendamentos
+            const response = await fetch("/api/agendamento"); 
             const agendamentos = await response.json();
 
-            // Limpa tabela
+            
             tbody.innerHTML = "";
 
             if (agendamentos.length === 0) {
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Salvar um novo agendamento no banco de dados
+    
     form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Remover um agendamento do banco de dados
+    
     tabela.addEventListener("click", async function (event) {
         if (event.target.classList.contains("remover")) {
             const id = event.target.getAttribute("data-id");

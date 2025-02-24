@@ -25,13 +25,13 @@ html, body {
 /* Produto individual */
 .produto {
     display: flex;
-    flex: 0 0 250px; /* Largura fixa */
+    flex: 0 0 250px; 
     text-align: center;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: #fff;
-    overflow: hidden; /* Evita que o texto extrapole */
+    overflow: hidden; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid #000;
     border-radius: 10px;
@@ -79,10 +79,9 @@ html, body {
 .produto p {
     font-size: 14px;
     line-height: 1.4;
-    max-height: 60px; /* Permite no máximo 3 linhas */
+    max-height: 60px; 
     overflow: hidden;
     display: -webkit-box;
-    /* -webkit-line-clamp: 3; Define um limite de 3 linhas */
     -webkit-box-orient: vertical;
     white-space: normal;
 }
