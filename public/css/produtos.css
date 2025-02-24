@@ -78,6 +78,7 @@ html, body {
 .produto p {
     font-size: 14px;
     line-height: 1.4;
+
     max-height: 60px;
     overflow: hidden;
     display: -webkit-box;

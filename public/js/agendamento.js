@@ -5,12 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const tbody = document.createElement("tbody");
     tabela.appendChild(tbody);
 
-
     async function carregarAgendamentos() {
         try {
             const response = await fetch("/api/agendamento");
             const agendamentos = await response.json();
-
 
             tbody.innerHTML = "";
 
@@ -38,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Erro ao carregar agendamentos:", error);
         }
     }
-
 
     form.addEventListener("submit", async function (event) {
         event.preventDefault();
@@ -74,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Erro ao salvar agendamento:", error);
         }
     });
-
 
     tabela.addEventListener("click", async function (event) {
         if (event.target.classList.contains("remover")) {

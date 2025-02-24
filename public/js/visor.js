@@ -1,9 +1,9 @@
 window.addEventListener("load", atualizarVisorQtdItens);
 
 function atualizarVisorQtdItens() {
+
     const qtdItens = localStorage.getItem("qtd_itens") || 0;
     const visor = document.querySelector(".carrinho");
-
 
     if (visor) {
         const visor_span = document.createElement("span");
