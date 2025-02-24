@@ -21,3 +21,19 @@
     margin: 10px auto;
 
 }
+
+.comentarios{
+    max-width: 1000px;  
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 40px auto;
+    justify-content: space-between;  
+}
+
+.comentarios p{
+    font-size: large;
+    font-style: italic;
+}
