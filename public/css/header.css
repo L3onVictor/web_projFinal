@@ -16,7 +16,7 @@ header h1 {
     flex: 1;
 }
 
-/* Centralizando o menu-nav */
+/*menu-nav */
 .menu-nav {
     position: absolute; 
     left: 50%;

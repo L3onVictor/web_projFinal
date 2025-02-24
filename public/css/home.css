@@ -1,7 +1,7 @@
 
 /* Estilização do popup */
 .popup {
-    display: none; /* Escondido por padrão */
+    display: none;
     position: fixed;
     top: 80%;
     left: 80%;
