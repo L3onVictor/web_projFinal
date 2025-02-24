@@ -10,7 +10,7 @@ const porta = 55555;
 app.use(express.json());
 app.use(cors()); 
 
-// Definir rotas
+// rotas
 app.use('/api', authRoutes);
 app.use('/api', loginRoutes);
 app.use('/api/agendamento', agendamentoRoutes);

@@ -1,13 +1,6 @@
 import { db } from "./db.js";
 import bcrypt from "bcrypt";
 
-/**
- * Função para adicionar um usuário ao banco de dados
- * @param {string} nome - Nome do usuário
- * @param {string} email - Email do usuário (único)
- * @param {string} senha - Senha do usuário (será armazenada como hash)
- * @returns {object} - Mensagem de sucesso ou erro
- */
 async function adicionarUsuario(nome, email, senha) {
     try {
         
@@ -28,7 +21,7 @@ async function adicionarUsuario(nome, email, senha) {
 
 export async function buscarUsuario(nome) {
     return new Promise((resolve, reject) => {
-        db.get("SELECT * FROM usuarios WHERE email = ?", [nome], (erro, usuario) => {
+        db.get("SELECT * FROM usuarios WHERE nome = ?", [nome], (erro, usuario) => {
             if (erro) reject(erro);
             else resolve(usuario);
         });

@@ -2,7 +2,7 @@ import { db } from "./db.js";
 import bcrypt from "bcrypt";
 
 async function inserirUsuarios() {
-    const senhaHash = await bcrypt.hash("123456", 10); // Hash da senha padrão
+    const senhaHash = await bcrypt.hash("123456", 10);
 
     try {
         await db.run(

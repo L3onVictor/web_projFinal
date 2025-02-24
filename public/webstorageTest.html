@@ -7,15 +7,14 @@
     <script>
         window.addEventListener("load", principal)
 
-        // l-dados (chave): "digitado pelo usuário"
+
         function principal (){
-            // Obter os dados do localstorage
+
             const d = localStorage.getItem("l-dados");
             if(d != null){
                 const p = document.getElementById("dados");
                 p.textContent = d;
             }
-            // Obter o input e cadastrar a função de callback.
             const input = document.querySelector("input");
             input.addEventListener("keyup", trataTeclaPressionada);
         }

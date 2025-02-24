@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/* Garantir que o body e html ocupem toda a altura da tela */
+
 html, body {
     height: 100%;
     margin: 0;
@@ -46,7 +46,7 @@ body {
     background: #ff9955;
 }
 
-/* Estilização da seção Hero */
+
 .hero {
     background: #222;
     color: white;
@@ -92,7 +92,7 @@ body {
     color: white;
     padding: 50px 20px;
 }
-/* Seção Equipe */
+
 #equipe {
     background: #fff;
     padding: 50px 20px;
@@ -119,14 +119,14 @@ body {
     border-radius: 10px;
 }
 
-/* Seção Endereço */
+
 #endereco {
     background: #222;
     color: white;
     padding: 50px 20px;
 }
 
-/* Seção Mapa */
+
 #mapa {
     background: #f4f4f4;
     padding: 50px 20px;

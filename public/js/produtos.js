@@ -104,7 +104,7 @@ const estoque = [
 function main() {
     const produtos_estoque = document.getElementsByClassName("produtos")[0];
 
-    // Cria os elementos em memória
+
     for (let x = 0; x < estoque.length; x++) {
         const produto = document.createElement("div");
         const img = document.createElement("img");
@@ -113,7 +113,7 @@ function main() {
         const valor = document.createElement("span");
         const button = document.createElement("button");
 
-        // Preencher com as informações dos produtos
+
         produto.id = estoque[x].id;
         img.src = estoque[x].img;
         nome.textContent = estoque[x].nome;
@@ -123,7 +123,7 @@ function main() {
 
         button.addEventListener("click", adicionarProdutoNoCarrinho);
 
-        // Montar a estrutura do DOM e a adiciona ao HTML
+
         produto.appendChild(img);
         produto.appendChild(nome);
         produto.appendChild(descricao);
@@ -168,10 +168,9 @@ function main() {
         const novoVisor = document.createElement("span");
         novoVisor.textContent = nQtdItens;
         novoVisor.classList.add("totalitens-carrinho");
-        document.querySelector(".carrinho").appendChild(novoVisor); // Adiciona o visor ao ícone do carrinho
+        document.querySelector(".carrinho").appendChild(novoVisor);
     }
 
-    // Chame essa função sempre que o número de itens mudar
     atualizarVisorQtdItens();
 
 }
