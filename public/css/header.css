@@ -16,7 +16,7 @@ header h1 {
     flex: 1;
 }
 
-/* Centralizando o menu-nav */
+/* Estilização do menu nav */
 .menu-nav {
     position: absolute; 
     left: 50%;
@@ -47,7 +47,7 @@ header h1 {
 }
 
 
-.pesquisa-nav {
+.nav-direita {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -55,12 +55,7 @@ header h1 {
     justify-content: flex-end; 
 }
 
-.lado-direito {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-
+/* Estilização do carrinho branco de compras*/
 .carrinho {
     display: flex;
     justify-content: center;

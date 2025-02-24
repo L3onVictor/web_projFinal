@@ -1,3 +1,4 @@
+/*Estilização dos serviços*/
 .secao-servicos {
     display: flex;
     justify-content: center;
@@ -10,30 +11,30 @@
 
 .servicos {
     display: flex;
-    overflow-x: auto; /* Ativa a rolagem horizontal */
+    overflow-x: auto; 
     scroll-behavior: smooth;
-    white-space: nowrap; /* Mantém os elementos em uma única linha */
+    white-space: nowrap; 
     gap: 20px;
     padding: 10px;
-    scrollbar-width: none; /* Esconde a barra no Firefox */
-    -ms-overflow-style: none; /* Esconde a barra no IE/Edge */
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
 
 .servicos::-webkit-scrollbar {
-    display: none; /* Esconde a barra no Chrome e Safari */
+    display: none; 
 }
 
 .servicos > div {
     display: inline-block;
-    flex: 0 0 auto; /* Mantém os elementos com largura fixa */
-    width: 320px; /* Define uma largura consistente */
+    flex: 0 0 auto; 
+    width: 320px; 
     text-align: center;
     padding: 15px;
     border: 2px solid #333;
     border-radius: 10px;
     background-color: #fff;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .servicos > div:hover {
@@ -43,7 +44,7 @@
 
 .servicos img {
     width: 100%;
-    max-width: 280px; /* Para melhor ajuste */
+    max-width: 280px; 
     height: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -53,28 +54,27 @@
     font-size: 1.5em;
     color: #003366;
     margin-bottom: 10px;
-    font-weight: bold; /* Mais destaque para o título */
+    font-weight: bold; 
 }
 
 .servicos p {
     font-size: 14px;
     line-height: 1.5;
-    max-height: 80px; /* Para evitar textos longos demais */
+    max-height: 80px; 
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 4; /* Exibe no máximo 4 linhas */
     -webkit-box-orient: vertical;
-    color: #666; /* Cor mais suave para o texto */
+    color: #666; 
 }
 
 @media (max-width: 768px) {
     .servicos {
-        flex-wrap: wrap; /* Permite que os cards quebrem para a linha em telas menores */
+        flex-wrap: wrap;
         justify-content: center;
     }
 
     .servicos > div {
-        width: 90%; /* Ajusta a largura para telas menores */
+        width: 90%; 
     }
 }
